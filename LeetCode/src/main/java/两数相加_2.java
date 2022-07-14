@@ -1,4 +1,3 @@
-import java.util.List;
 
 public class 两数相加_2 {
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
@@ -55,10 +54,7 @@ public class 两数相加_2 {
         listNode2.add(1);
         listNode2.add(2);
         listNode2.add(3);
-
         ListNode listNode1 = addTwoNumbers2(listNode, listNode2);
         listNode1.print();
-
-
     }
 }
