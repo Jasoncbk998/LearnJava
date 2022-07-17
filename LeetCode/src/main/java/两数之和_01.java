@@ -7,8 +7,9 @@ public class 两数之和_01 {
         System.out.println(tools.printArray(ints));
     }
 
-
-    public static  int[] twoSum(int[] nums, int target) {
+    public static int[] twoSum(int[] nums, int target) {
+        // 利用map,key= target - nums[i]
+        // value= i 元素索引
         Map<Integer, Integer> maps = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             if (maps.containsKey(target - nums[i])) {

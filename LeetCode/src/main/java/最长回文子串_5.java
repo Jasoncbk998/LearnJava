@@ -1,0 +1,37 @@
+public class 最长回文子串_5 {
+    /**
+     * 输入：s = "babad"
+     * 输出："bab"
+     * 解释："aba" 同样是符合题意的答案。
+     */
+    public static String longestPalindrome(String s) {
+        int left = 0;
+        int pl = 0, pr = 0, right = -1;
+        byte[] bytes = s.getBytes();
+        int length = bytes.length;
+        while (left < length) {
+            while (right + 1 < length && bytes[left] == bytes[right + 1]) {
+                right++;
+            }
+            while (left - 1 >= 0 && right + 1 < length && bytes[right + 1] == bytes[left - 1]) {
+                left--;
+                right++;
+            }
+            if (right - left > pr - pl) {
+                pr = right;
+                pl = left;
+            }
+            left = (left + right) / 2 + 1;
+            right = left;
+        }
+        return s.substring(pl, pr + 1);
+    }
+
+    public static void main(String[] args) {
+        String s = "abccba";
+        String s1 = longestPalindrome(s);
+        System.out.println(s1);
+
+    }
+
+}
