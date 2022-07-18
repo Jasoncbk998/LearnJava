@@ -1,4 +1,5 @@
 public class 合并两个有序链表_21 {
+
     public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode prehead = new ListNode(-1);
         ListNode prev = prehead;

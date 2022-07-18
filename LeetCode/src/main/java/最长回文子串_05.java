@@ -1,3 +1,5 @@
+import java.util.logging.Level;
+
 public class 最长回文子串_05 {
     /**
      * 输入：s = "babad"
@@ -9,11 +11,12 @@ public class 最长回文子串_05 {
      */
     public static String longestPalindrome(String s) {
         int left = 0;
-        int pl=0;
-        int pr=0;
+        int pl = 0;
+        int pr = 0;
         int right = -1;
         byte[] bytes = s.getBytes();
         int length = bytes.length;
+        // 不断向右移动回文边界
         while (left < length) {
             while (right + 1 < length && bytes[left] == bytes[right + 1]) {
                 right++;
@@ -32,11 +35,10 @@ public class 最长回文子串_05 {
         return s.substring(pl, pr + 1);
     }
 
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
         String s = "aaabccbadddd";
         String s1 = longestPalindrome(s);
         System.out.println(s1);
-
     }
 }
