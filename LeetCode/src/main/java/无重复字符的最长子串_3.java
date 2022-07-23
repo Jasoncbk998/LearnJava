@@ -11,7 +11,7 @@ public class 无重复字符的最长子串_3 {
      */
     public static int lengthOfLongestSubstring(String s) {
         if (s.length() == 0) return 0;
-        HashMap<Character, Integer> map = new HashMap<Character, Integer>();
+        HashMap<Character, Integer> map = new HashMap<>();
         int max = 0;
         int left = 0;
         for (int i = 0; i < s.length(); i++) {

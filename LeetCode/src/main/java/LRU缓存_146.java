@@ -18,15 +18,17 @@ class LRUCache {
         }
     }
 
+    // 缓存
     private Map<Integer, DLinkedNode> cache = new HashMap<Integer, DLinkedNode>();
+    //大小
     private int size;
+    // 容量
     private int capacity;
     private DLinkedNode head, tail;
 
     public LRUCache(int capacity) {
         this.size = 0;
         this.capacity = capacity;
-
         head = new DLinkedNode();
         tail = new DLinkedNode();
         head.next = tail;
@@ -34,6 +36,7 @@ class LRUCache {
     }
 
     public int get(int key) {
+        // map 缓存
         DLinkedNode node = cache.get(key);
         if (node == null) {
             return -1;
@@ -49,13 +52,13 @@ class LRUCache {
             cache.put(key, newNode);
             addToHead(newNode);
             ++size;
-            if (size>capacity){
+            if (size > capacity) {
                 DLinkedNode tail = removeTail();
                 cache.remove(tail.key);
                 --size;
             }
-        }else {
-            node.value=value;
+        } else {
+            node.value = value;
             moveToHead(node);
         }
     }
@@ -65,18 +68,19 @@ class LRUCache {
         addToHead(node);
     }
 
+    // 将该节点添加到head
     private void addToHead(DLinkedNode node) {
         node.prev = head;
         node.next = head.next;
         head.next.prev = node;
         head.next = node;
     }
-
+    // 删除该节点
     private void removeNode(DLinkedNode node) {
         node.prev.prev = node.next;
         node.next.prev = node.prev;
     }
-
+    // 移除末尾结点
     private DLinkedNode removeTail() {
         DLinkedNode res = tail.prev;
         removeNode(res);
