@@ -7,6 +7,10 @@ public class 环形链表2_142 {
      * 解释：链表中有一个环，其尾部连接到第二个节点。
      */
     // hash表
+    // 利用hashset
+    // while
+    // 发现包含此节点则返回该节点
+    // 不包含此节点则add
     public ListNode detectCycle1(ListNode head) {
         ListNode pos = head;
         HashSet<ListNode> visited = new HashSet<>();
