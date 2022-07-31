@@ -1,5 +1,5 @@
 
-public class 两数相加_2 {
+public class 两数相加_02 {
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         // 复制一份对象,内存地址是一样的
         ListNode p1 = l1, p2 = l2;

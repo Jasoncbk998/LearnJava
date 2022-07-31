@@ -1,9 +1,12 @@
+package main.java;
+
 import java.util.Random;
 
 public class sort_快速排序 {
     public static void main(String[] args) {
         int[] nums={5,4,3,2,1};
         sortArray(nums);
+        System.out.println("aa");
     }
     public static  int[] sortArray(int[] nums) {
         quickSort(nums, 0, nums.length - 1);

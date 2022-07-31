@@ -1,4 +1,3 @@
-import apple.laf.JRSUIUtils;
 
 public class 对称二叉树_101 {
     public static boolean isSymmetric(TreeNode root) {

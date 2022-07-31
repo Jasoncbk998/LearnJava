@@ -1,4 +1,4 @@
-public class 反转整数_7 {
+public class 反转整数_07 {
     public static int reverse(int x) {
         int result = 0;
         while (x != 0) {

@@ -1,6 +1,6 @@
 import java.util.logging.Level;
 
-public class 最长回文子串_5 {
+public class 最长回文子串_05 {
     /**
      * 输入：s = "babad"
      * 输出："bab"

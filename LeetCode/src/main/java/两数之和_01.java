@@ -1,6 +1,6 @@
 import java.util.HashMap;
 
-public class 两数之和_1 {
+public class 两数之和_01 {
     /**
      * 输入：nums = [2,7,11,15], target = 9
      * 输出：[0,1]
