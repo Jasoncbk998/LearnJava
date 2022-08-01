@@ -7,6 +7,7 @@ public class 删除链表的倒数第N个结点_19 {
      */
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode dummy = new ListNode(0, head);
+        // 获得长度
         int length = getLength(head);
         ListNode cur = dummy;
         // length=5 n=2
