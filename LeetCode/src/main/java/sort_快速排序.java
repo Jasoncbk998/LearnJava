@@ -1,7 +1,3 @@
-package main.java;
-
-import java.util.Random;
-
 public class sort_快速排序 {
     public static void main(String[] args) {
         int[] nums={5,4,3,2,1};

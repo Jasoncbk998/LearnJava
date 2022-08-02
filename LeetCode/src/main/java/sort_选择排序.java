@@ -5,8 +5,6 @@ public class sort_选择排序 {
         for(int a:ints){
             System.out.print(a+"\t");
         }
-
-
     }
     public static void selectSort(int[] a, int n) {
         int i; // 有序区的末尾位置
@@ -28,6 +26,5 @@ public class sort_选择排序 {
                 a[min] = temp;
             }
         }
-
     }
 }

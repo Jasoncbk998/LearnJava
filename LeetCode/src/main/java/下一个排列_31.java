@@ -1,5 +1,3 @@
-
-
 public class 下一个排列_31 {
     public static void nextPermutation(int[] nums) {
         int i = nums.length - 2;

@@ -1,7 +1,6 @@
 import java.util.Arrays;
 
 public class 排序链表_148 {
-
     public ListNode sortList2(ListNode head) {
         if (head == null || head.next == null) {
             return head;

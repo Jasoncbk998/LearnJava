@@ -3,9 +3,6 @@ public class ListNode {
     int val;
     ListNode next;
 
-    ListNode() {
-    }
-
     ListNode(int val) {
         this.val = val;
     }
@@ -14,12 +11,14 @@ public class ListNode {
         this.val = val;
         this.next = next;
     }
+
     public void print() {
-        System.out.print(this.val+"\t");
+        System.out.print(this.val + "\t");
         if (this.next != null) {
             this.next.print();
         }
     }
+
     public void add(int newdata) {
         ListNode newNode = new ListNode(newdata);
         if (this.next == null) {
@@ -28,5 +27,4 @@ public class ListNode {
             this.next.add(newdata);
         }
     }
-
 }

@@ -4,14 +4,12 @@ import java.util.List;
 import java.util.Queue;
 
 public class 二叉树的层序遍历_102 {
-
     // 按层序从上到下遍历一颗树。
     public List<List<Integer>> levelOrder(TreeNode root) {
-        List<List<Integer>> ret = new ArrayList<List<Integer>>();
+        List<List<Integer>> ret = new ArrayList<>();
         if (root == null) {
             return ret;
         }
-
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
         queue.offer(root);
         while (!queue.isEmpty()) {
@@ -29,9 +27,6 @@ public class 二叉树的层序遍历_102 {
             }
             ret.add(level);
         }
-
         return ret;
-
-
     }
 }

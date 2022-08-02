@@ -10,12 +10,13 @@ public class 最长回文子串_05 {
      * @return
      */
     public static String longestPalindrome(String s) {
-        int left = 0;
-        int pl = 0;
-        int pr = 0;
-        int right = -1;
+
+        int left = 0, right = -1;
+        int pl = 0, pr = 0;
+
         byte[] bytes = s.getBytes();
         int length = bytes.length;
+
         // 不断向右移动回文边界
         while (left < length) {
             // 遇到相同字符,right向右移动

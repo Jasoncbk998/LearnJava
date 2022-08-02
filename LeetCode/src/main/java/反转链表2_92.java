@@ -22,12 +22,10 @@ public class 反转链表2_92 {
         rightNode.next = null;
         // 反转链表
         reverseLinkedList(leftNode);
-
         //拼接原来的链表
         pre.next = rightNode;
         leftNode.next = curr;
         return dummyNode.next;
-
     }
 
     private void reverseLinkedList(ListNode head) {
